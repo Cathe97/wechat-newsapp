@@ -72,7 +72,7 @@ Page({
     })
   },
 
-//点击其他类目的时候重新请求相应的头条以及新闻列表数据
+//点击其他类目的时候重新请求相应的头条以及新闻列表数据同时改变样式
   onTapType(event){
     let newsType=event.currentTarget.id
     this.getTopnews(newsType)
