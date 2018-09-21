@@ -1,5 +1,5 @@
 <view class="navbar-wrapper">
-  <view class='navbar-title' wx:for="{{[1,2,3,4,5,6,7]}}">国内</view>
+  <view class='navbar-title' wx:for="{{typeList}}">{{item.value}}</view>
 </view>
 <view class='topnews-wrapper'>
   <image class="topnews-bg" src='{{topnewsImg}}'></image>

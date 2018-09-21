@@ -1,6 +1,7 @@
 // pages/index/index.js
 const sortMap=['gn','gj','cj','yl','js','ty','other']
 
+const sortChMap=["国内","国际","财经","娱乐","军事","体育","其他"]
 
 Page({
 
@@ -8,10 +9,13 @@ Page({
    * 页面的初始数据
    */
   data: {
-    newList:[]
+    newList:[],
+    typeList:[],
+
   },
 
   onLoad: function(options) {
+    this.setTypeList()
     this.getTopnews(sortMap[0])
   },
 
@@ -34,6 +38,19 @@ Page({
         })
         this.setNewsList(result)
       },
+    })
+  },
+
+  setTypeList(){
+    let typeList=[]
+    for(let i=0;i<7;i++){
+      typeList.push({
+        key:sortMap[i],
+        value:sortChMap[i],
+      })
+    }
+    this.setData({
+      typeList:typeList
     })
   },
 
