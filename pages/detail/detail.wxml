@@ -1,2 +1,8 @@
 <!--pages/detail/detail.wxml-->
-<text>pages/detail/detail.wxml</text>
+<view class='detail-wrapper'>
+  <view class='detail-title'>外媒称香港回归15年打破“经济将死”预言</view>
+  <view class='detail-info'>
+    <view class='detail-source'>中国新闻网 09:34</view>
+    <view class='detail-readcount'>阅读 471</view>
+  </view>
+</view>
