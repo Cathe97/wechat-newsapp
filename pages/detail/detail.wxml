@@ -5,4 +5,6 @@
     <view class='detail-source'>中国新闻网 09:34</view>
     <view class='detail-readcount'>阅读 471</view>
   </view>
+  <view class='detail-content'>
+  </view>
 </view>

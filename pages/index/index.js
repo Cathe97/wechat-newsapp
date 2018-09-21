@@ -11,7 +11,7 @@ Page({
   data: {
     newList:[],
     typeList:[],
-
+    nowType:'gn'
   },
 
   onLoad: function(options) {
@@ -76,6 +76,9 @@ Page({
   onTapType(event){
     let newsType=event.currentTarget.id
     this.getTopnews(newsType)
+    this.setData({
+      nowType:newsType
+    })
   }
 
 //点击具体新闻进入详情页

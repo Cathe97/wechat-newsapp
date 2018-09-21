@@ -14,7 +14,11 @@
   line-height: 40rpx;
   color: #CEE5F5;
   padding-bottom: 10rpx;
-  /* border-bottom: 1px solid white; */
+}
+/* 激活样式 */
+.navbar-active{
+  color: white;
+  border-bottom: 1px solid white;
 }
 .topnews-wrapper{
   position: relative;

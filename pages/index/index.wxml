@@ -1,5 +1,5 @@
 <view class="navbar-wrapper">
-  <view class='navbar-title' wx:for="{{typeList}}" bindtap='onTapType' id='{{item.key}}'>{{item.value}}</view>
+  <view class="navbar-title {{nowType==item.key?'navbar-active':''}}" wx:for="{{typeList}}" bindtap='onTapType' id='{{item.key}}'>{{item.value}}</view>
 </view>
 <view class='topnews-wrapper'>
   <image class="topnews-bg" src='{{topnewsImg}}'></image>
