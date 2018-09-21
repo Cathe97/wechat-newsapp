@@ -1,0 +1,26 @@
+<view class="navbar-wrapper">
+  <view class='navbar-title' wx:for="{{[1,2,3,4,5,6,7]}}">国内</view>
+</view>
+<view class='topnews-wrapper'>
+  <image class="topnews-bg" src='{{topnewsImg}}'></image>
+  <image class="topnews-img" src='{{topnewsImg}}'></image>
+  <view class='topnews-icon'>热门</view>
+  <view class='topnews-text'>
+    <view class='topnews-title'>
+      {{topnewsTitle}}
+    </view>
+    <view class='topnews-info'>{{topnewsInfo}}</view>
+  </view>
+</view>
+<view class='news-list'>
+  <view class='news-thumbnail' wx:for="{{newsList}}">
+    
+    <view class='news-text'>
+      <view class='news-title'>{{item.title}}</view>
+      <view class='news-info'>{{item.info}}</view>
+    </view>
+    <image class='news-img' src='{{item.imagePath}}'>
+    </image>
+  </view>
+   
+</view>
