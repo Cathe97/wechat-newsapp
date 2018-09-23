@@ -48,7 +48,8 @@ Page({
           topnewsImg: topnewsImg,
           topnewsTitle: topnewsTitle,
           topnewsInfo: `${result[0].source} 
-          ${result[0].date.slice(11, 16)}`
+          ${result[0].date.slice(11, 16)}`,
+          topnewsId:result[0].id
         })
         this.setNewsList(result)
       },
@@ -64,7 +65,8 @@ Page({
         title:result[i].title,
         imagePath:result[i].firstImage,
         info: `${result[i].source} 
-          ${result[i].date.slice(11, 16)}`
+          ${result[i].date.slice(11, 16)}`,
+        id:result[i].id
       })
     }
     this.setData({
@@ -79,8 +81,13 @@ Page({
     this.setData({
       nowType:newsType
     })
-  }
+  },
 
 //点击具体新闻进入详情页
-
+  onTapDetail(event){
+    let deatilId=event.currentTarget.id
+    wx.navigateTo({
+      url: '/pages/detail/detail?id='+deatilId,
+    })
+  }
 })
