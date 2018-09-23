@@ -1,7 +1,7 @@
 <view class="navbar-wrapper">
   <view class="navbar-title {{nowType==item.key?'navbar-active':''}}" wx:for="{{typeList}}" bindtap='onTapType' id='{{item.key}}'>{{item.value}}</view>
 </view>
-<view class='topnews-wrapper'>
+<view class='topnews-wrapper' id='{{topnewsId}}' bindtap='onTapDetail'>
   <image class="topnews-bg" src='{{topnewsImg}}'></image>
   <image class="topnews-img" src='{{topnewsImg}}'></image>
   <view class='topnews-icon'>热门</view>
@@ -13,8 +13,7 @@
   </view>
 </view>
 <view class='news-list'>
-  <view class='news-thumbnail' wx:for="{{newsList}}">
-    
+  <view class='news-thumbnail' wx:for="{{newsList}}" id='{{item.id}}' bindtap='onTapDetail'>
     <view class='news-text'>
       <view class='news-title'>{{item.title}}</view>
       <view class='news-info'>{{item.info}}</view>
