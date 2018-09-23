@@ -19,6 +19,13 @@ Page({
     this.getTopnews(sortMap[0])
   },
 
+  //下拉刷新
+  onPullDownRefresh(){
+    this.getTopnews(this.data.nowType,()=>{
+      wx.stopPullDownRefresh()
+    })
+  },
+
 //设置新闻类名列表
   setTypeList() {
     let typeList = []
@@ -33,8 +40,8 @@ Page({
     })
   },
 
-//请求并设置头条新闻的数据
-  getTopnews(sth) {
+//请求并设置头条新闻以及新闻列表的数据
+  getTopnews(sth,callback) {
     wx.request({
       url: 'https://test-miniprogram.com/api/news/list',
       data: {
@@ -52,6 +59,9 @@ Page({
           topnewsId:result[0].id
         })
         this.setNewsList(result)
+      },
+      complete:()=>{
+        callback&&callback()
       },
     })
   },

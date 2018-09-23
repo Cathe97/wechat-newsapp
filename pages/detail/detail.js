@@ -5,17 +5,30 @@ Page({
    * 页面的初始数据
    */
   data: {
-    detailList:[]
+    detailList:[],
+    nowId:0
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (option) {
-    this.getDetail(option.id)
+    //获取该新闻的id并保存，以便于下拉刷新
+    let nowId=option.id
+    this.setData({
+      nowId:nowId
+    })
+    this.getDetail(nowId)
   },
 
-  getDetail(id){
+  //下拉刷新实现下拉刷新
+  onPullDownRefresh(){
+    this.getDetail(this.data.nowId,()=>{
+      wx.stopPullDownRefresh()
+    })
+  },
+
+  getDetail(id,callback){
     wx.request({
       url: 'https://test-miniprogram.com/api/news/detail',
       data:{
@@ -38,6 +51,9 @@ Page({
           ${info.date.slice(11, 16)}`,
           readCount:info.readCount
         })
+      },
+      complete:()=>{
+        callback&&callback()
       }
     })
   }
