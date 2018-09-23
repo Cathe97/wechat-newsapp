@@ -3,6 +3,8 @@ const sortMap=['gn','gj','cj','yl','js','ty','other']
 
 const sortChMap=["国内","国际","财经","娱乐","军事","体育","其他"]
 
+const App=getApp()
+
 Page({
 
   /**
@@ -11,13 +13,20 @@ Page({
   data: {
     newList:[],
     typeList:[],
-    nowType:'gn'
+    nowType:'gn',
+    navH:'',
   },
 
   onLoad: function(options) {
     this.setTypeList()
     this.getTopnews(sortMap[0])
+    this.setData({
+      navH:App.globalData.navHeight,
+    })
+   
   },
+
+
 
   //下拉刷新
   onPullDownRefresh(){

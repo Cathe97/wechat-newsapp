@@ -1,0 +1,25 @@
+.nav-wrapper{
+  position: relative;
+  background-color:#339EE0;
+  
+}
+.nav-content{
+  position: absolute;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  bottom: 0;
+  width: 100%;
+  height: 90rpx;
+  margin-left: 40rpx;
+}
+.nav-icon{
+  width: 50rpx;
+  height: 50rpx;
+}
+.nav-title{
+  font-size: 30rpx;
+  color: white;
+  line-height: 50rpx;
+  margin: 0 10rpx;
+}

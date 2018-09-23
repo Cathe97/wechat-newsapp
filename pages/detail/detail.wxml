@@ -1,4 +1,11 @@
 <!--pages/detail/detail.wxml-->
+<!-- 设置小程序标题栏 -->
+<view class="nav-wrapper" style='height:{{navH}}rpx'>
+  <view class='nav-content'>
+    <image class='nav-icon' src='/images/arrow.png'  bindtap='onTapBack'></image>
+    <view class='nav-title'>悦读·资讯</view>
+  </view>
+</view>
 <view class='detail-wrapper'>
   <view class='detail-title'>{{title}}</view>
   <view class='detail-info'>

@@ -1,5 +1,14 @@
-<view class="navbar-wrapper">
-  <view class="navbar-title {{nowType==item.key?'navbar-active':''}}" wx:for="{{typeList}}" bindtap='onTapType' id='{{item.key}}'>{{item.value}}</view>
+<!-- 设置小程序标题栏 -->
+<view class="nav-wrapper" style='height:{{navH}}rpx'>
+  <view class='nav-content'>
+    <image class='nav-icon' src='/images/index-icon.jpg'></image>
+    <view class='nav-title'>悦读·资讯</view>
+  </view>
+</view>
+
+<!-- 设置导航栏 -->
+<view class="tab-wrapper">
+  <view class="tab-title {{nowType==item.key?'tab-active':''}}" wx:for="{{typeList}}" bindtap='onTapType' id='{{item.key}}'>{{item.value}}</view>
 </view>
 <view class='topnews-wrapper' id='{{topnewsId}}' bindtap='onTapDetail'>
   <image class="topnews-bg" src='{{topnewsImg}}'></image>
@@ -21,5 +30,5 @@
     <image class='news-img' src='{{item.imagePath}}'>
     </image>
   </view>
-   
+
 </view>

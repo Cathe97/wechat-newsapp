@@ -1,5 +1,6 @@
 /* pages/index/index.wxss */
-.navbar-wrapper{
+
+.tab-wrapper{
   position: relative;
   background-color: #339EE0;
   display: flex;
@@ -7,7 +8,7 @@
   width: 100%;
   padding: 34rpx 0rpx 15rpx;
 }
-.navbar-title{
+.tab-title{
   margin: 0 20rpx;
   text-align: center;
   font-size: 30rpx;
@@ -16,7 +17,7 @@
   padding-bottom: 10rpx;
 }
 /* 激活样式 */
-.navbar-active{
+.tab-active{
   color: white;
   border-bottom: 1px solid white;
 }

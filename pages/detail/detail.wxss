@@ -29,3 +29,16 @@
   font-weight:800;
   margin:1em 0;
 }
+.nav-wrapper{
+  position: relative;
+  background-color:white;
+  border-bottom: 1px solid #339EE0;
+}
+.nav-icon{
+  width:26rpx;
+  height:48rpx;
+}
+.nav-title{
+  color: black;
+  margin-left: 1em;
+}
